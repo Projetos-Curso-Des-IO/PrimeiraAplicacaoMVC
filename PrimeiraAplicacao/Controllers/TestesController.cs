@@ -3,30 +3,38 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace PrimeiraAplicacao.Controllers
 {
+	//[Route("/", Order = 0)]
+	[Route("pedidos-vendas")]
 	public class TestesController : Controller
 	{
-		// GET: Testes
+
+
 		public ActionResult Index()
 		{
 			return View();
 		}
 
-		// GET: Testes/Details/5
-		public ActionResult Details(int id)
+		[HttpGet("detalhes/{id:int}")]
+		public ActionResult Details(int id, string teste, string teste2)
 		{
+			Console.WriteLine($"ID: {id} - teste: {teste} - teste2: {teste2}");
 			return View();
 		}
 
-		// GET: TestesController/Create
+
+
+
+
+		[HttpGet("novo")]
 		public ActionResult Create()
 		{
+			Console.WriteLine("Criar");
 			return View();
 		}
 
-		// POST: TestesController/Create
-		[HttpPost]
+		[HttpPost("novo")]
 		[ValidateAntiForgeryToken]
-		public ActionResult Create(IFormCollection collection)
+		public ActionResult Create([FromForm] IFormCollection collection)
 		{
 			try
 			{
@@ -38,16 +46,17 @@ namespace PrimeiraAplicacao.Controllers
 			}
 		}
 
-		// GET: TestesController/Edit/5
+
+
+		[HttpGet("editar")]
 		public ActionResult Edit(int id)
 		{
 			return View();
 		}
 
-		// POST: TestesController/Edit/5
-		[HttpPost]
+		[HttpPost("editar/{id:int}")]
 		[ValidateAntiForgeryToken]
-		public ActionResult Edit(int id, IFormCollection collection)
+		public ActionResult Edit(int id, [FromForm] IFormCollection collection)
 		{
 			try
 			{
@@ -59,14 +68,16 @@ namespace PrimeiraAplicacao.Controllers
 			}
 		}
 
-		// GET: TestesController/Delete/5
+
+
+
+		[HttpGet("deletar{id:int}")]
 		public ActionResult Delete(int id)
 		{
 			return View();
 		}
 
-		// POST: TestesController/Delete/5
-		[HttpPost]
+		[HttpPost("deletar{id:int}")]
 		[ValidateAntiForgeryToken]
 		public ActionResult Delete(int id, IFormCollection collection)
 		{
