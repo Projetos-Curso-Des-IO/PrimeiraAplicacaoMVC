@@ -2,7 +2,105 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestão Integrada</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Estilos personalizados -->
+    <style>
+        body {
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+            color: #fff;
+            font-family: 'Arial', sans-serif;
+        }
+        .welcome-section {
+            padding: 100px 0;
+            text-align: center;
+        }
+        .welcome-section h1 {
+            font-size: 3.5rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .welcome-section p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+        .welcome-section a {
+            color: #ffdd57;
+            text-decoration: none;
+            font-weight: bold;
+            border-bottom: 2px solid #ffdd57;
+            transition: all 0.3s ease;
+        }
+        .welcome-section a:hover {
+            color: #fff;
+            border-bottom-color: #fff;
+        }
+        .features-section {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 50px 0;
+            border-radius: 15px;
+            margin-top: 50px;
+        }
+        .feature-icon {
+            font-size: 2.5rem;
+            color: #ffdd57;
+            margin-bottom: 15px;
+        }
+        .feature-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .feature-description {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Seção de Boas-Vindas -->
+        <div class="welcome-section">
+            <h1 class="display-4">Bem-vindo</h1>
+            <p>Descubra como a gestão integrada pode transformar seu processo de confecção.</p>
+            <p>Saiba mais sobre <a href="https://learn.microsoft.com/aspnet/core">nossa plataforma</a>.</p>
+        </div>
+
+        <!-- Seção de Recursos -->
+        <div class="features-section">
+            <div class="row">
+                <div class="col-md-4 text-center">
+                    <div class="feature-icon">📊</div>
+                    <div class="feature-title">Gestão Eficiente</div>
+                    <div class="feature-description">
+                        Controle todos os processos de produção de forma integrada e simplificada.
+                    </div>
+                </div>
+                <div class="col-md-4 text-center">
+                    <div class="feature-icon">🤖</div>
+                    <div class="feature-title">Automação</div>
+                    <div class="feature-description">
+                        Automatize tarefas repetitivas e aumente a produtividade da sua equipe.
+                    </div>
+                </div>
+                <div class="col-md-4 text-center">
+                    <div class="feature-icon">📈</div>
+                    <div class="feature-title">Relatórios Detalhados</div>
+                    <div class="feature-description">
+                        Acesse relatórios em tempo real para tomar decisões mais inteligentes.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS (opcional, para funcionalidades como dropdowns, modais, etc.) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
