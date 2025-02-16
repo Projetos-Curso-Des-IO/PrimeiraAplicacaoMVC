@@ -1,6 +1,122 @@
 ﻿@{
-    ViewData["Title"] = "Privacy Policy";
+    ViewData["Title"] = "Módulos";
 }
-<h1>@ViewData["Title"]</h1>
 
-<p>Use this page to detail your site's privacy policy.</p>
+<style>
+    body {
+        background: linear-gradient(135deg, #6a11cb, #2575fc);
+        color: #fff;
+        font-family: 'Arial', sans-serif;
+    }
+
+    .card {
+        background: rgba(255, 255, 255, 0.1);
+        border: none;
+        border-radius: 10px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+    .feature-icon {
+        font-size: 2.5rem;
+        color: #ffdd57;
+        margin-bottom: 15px;
+    }
+
+    .btn-primary {
+        background-color: #ffdd57;
+        border: none;
+        color: #6a11cb;
+        font-weight: bold;
+    }
+
+        .btn-primary:hover {
+            background-color: #ffcc00;
+            color: #6a11cb;
+        }
+</style>
+
+<div class="container">
+    <h1 class="text-center mb-4">@ViewData["Title"]</h1>
+
+    <!-- Introdução -->
+    <div class="mb-5">
+        <p class="lead text-center">
+            Na Titanium Software, valorizamos sua privacidade. Esta política explica como coletamos, usamos e protegemos suas informações.
+        </p>
+    </div>
+
+    <!-- Seção de Categorias Têxteis -->
+    <div class="row">
+        <!-- Módulo de Corte -->
+        <div class="col-md-3 mb-4">
+            <div class="card h-100 text-center">
+                <div class="card-body">
+                    <div class="feature-icon mb-3">✂️</div>
+                    <h3 class="card-title">Corte</h3>
+                    <p class="card-text">
+                        Gerencie todo o processo de corte de tecidos com precisão e eficiência.
+                    </p>
+                    <a href="#" class="btn btn-primary">Saiba Mais</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Módulo de Costura -->
+        <div class="col-md-3 mb-4">
+            <div class="card h-100 text-center">
+                <div class="card-body">
+                    <div class="feature-icon mb-3">🧵</div>
+                    <h3 class="card-title">Costura</h3>
+                    <p class="card-text">
+                        Controle a produção de costura com ferramentas integradas e relatórios em tempo real.
+                    </p>
+                    <a href="#" class="btn btn-primary">Saiba Mais</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Módulo de Acabamento -->
+        <div class="col-md-3 mb-4">
+            <div class="card h-100 text-center">
+                <div class="card-body">
+                    <div class="feature-icon mb-3">👕</div>
+                    <h3 class="card-title">Acabamento</h3>
+                    <p class="card-text">
+                        Acompanhe as etapas finais de produção, como lavagem, prensagem e embalagem.
+                    </p>
+                    <a href="#" class="btn btn-primary">Saiba Mais</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Módulo de Qualidade -->
+        <div class="col-md-3 mb-4">
+            <div class="card h-100 text-center">
+                <div class="card-body">
+                    <div class="feature-icon mb-3">🔍</div>
+                    <h3 class="card-title">Qualidade</h3>
+                    <p class="card-text">
+                        Garanta a qualidade dos produtos com inspeções e controles rigorosos.
+                    </p>
+                    <a href="#" class="btn btn-primary">Saiba Mais</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Texto da Política de Privacidade -->
+    <div class="mt-5">
+        <h2 class="mb-3">Nossa Política de Privacidade</h2>
+        <p>
+            Na Titanium Software, estamos comprometidos em proteger suas informações pessoais. Coletamos apenas os dados necessários para fornecer nossos serviços e garantir uma experiência personalizada.
+        </p>
+        <p>
+            Suas informações são armazenadas com segurança e nunca são compartilhadas com terceiros sem sua autorização. Para mais detalhes, entre em contato conosco.
+        </p>
+    </div>
+</div>
