@@ -13,8 +13,7 @@ namespace PrimeiraAplicacao.Models
 		public string Nome { get; set; }
 
 		[Required(ErrorMessage = "O campo {0} é obrigatório")]
-		[DataType(DataType.Date)]
-		[Range(typeof(DateTime), "1/1/1900", "1/1/2100", ErrorMessage = "Data de nascimento inválida.")]
+		[DataType(DataType.Date, ErrorMessage ="O campo {0} está em formato incorreto")]
 		[Display(Name = "Data de nascimento")]
 		public DateTime DataNascimento { get; set; }
 
@@ -29,7 +28,7 @@ namespace PrimeiraAplicacao.Models
 		[NotMapped]
 		public string EmailConfirmacao { get; set; }
 
-		[Required]
+		[Required(ErrorMessage = "O campo {0} é obrigatório")]
 		[Range(1, 5, ErrorMessage = "A avaliação deve estar entre 1 e 5.")]
 		public int Avaliacao { get; set; }
 		public bool Ativo { get; set; }
